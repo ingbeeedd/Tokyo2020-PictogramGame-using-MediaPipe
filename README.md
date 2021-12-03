@@ -1,0 +1,1 @@
+# Tokyo2020-PictogramGame-using-MediaPipe
