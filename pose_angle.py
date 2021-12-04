@@ -7,7 +7,7 @@
 #왼쪽 무릎 L_knee
 #오른쪽 무릎 R_knee
 
-from models import User
+from models.models import User
 
 L_arm=0, R_arm=0, L_gyeo=0, R_gyeo=0
 L_hip=0, R_hip=0, L_knee=0, R_knee=0
