@@ -35,3 +35,24 @@ class User(db.Model): #데이터 모델을 나타내는 객체 선언
             "create_date": self.create_date,
             "score": self.score
         }
+    
+
+class Image(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    save_path = db.Column(db.String(128), nullable=False)
+    label = db.Column(db.String(50))
+
+
+    def __init__(self, save_file_name, save_path):
+        self.save_file_name = save_file_name
+        self.save_path = save_path
+
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'save_file_name': self.save_file_name,
+            'save_path': self.save_path,
+            'created_date': self.created_date
+        }
